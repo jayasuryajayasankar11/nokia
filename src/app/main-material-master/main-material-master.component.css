@@ -1,0 +1,80 @@
+.mx_wd {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.content h2 {
+    color: white;
+    padding: 5px;
+}
+
+.content h3{
+    color: rgb(40, 40, 138);
+    padding: 5px;
+}
+
+.grid {
+    background-color: #fcf8f87a;
+    box-shadow: 0 4px 27px rgba(0, 0, 0, .1);
+   
+    
+}
+.tbl_mx{
+    max-width: 800px;
+    margin: auto;
+}
+.tbl_mx .frm_data{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+    justify-content: space-between;
+    height: 300px;
+    align-items: center;
+
+
+}
+
+.frm_data label{
+    color: rgb(40, 40, 138);
+ 
+}
+
+.tbl_mx .frm_data input {
+    width: 220px;
+    border-radius: 5px;
+    /* border: none; */
+    height: 20px;
+
+}
+
+.btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    
+}
+
+.s_btn{
+    color:white;
+    background-color: rgb(0, 128, 0);
+    border: none;
+    padding: 10px;
+    margin:0 5px 15px 0px;
+    border-radius: 5px;
+}
+
+.c_btn{
+    color: white;
+    background-color: rgb(10, 172, 236);
+    border: none;
+    padding: 10px;
+    margin: 0 15px 15px 0;
+    border-radius: 5px;
+}

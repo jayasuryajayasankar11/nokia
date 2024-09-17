@@ -1,0 +1,150 @@
+<!--  <form (ngSubmit)="onSubmit()" #materialForm="ngForm">
+        <div class="grids">
+            <div class="grid">
+                <div>
+                    <label for="A">Part Code</label>
+                    <input type="text" [(ngModel)]="materialData.partCode" name="partCode" id="A"
+                        placeholder="Enter your code">
+                </div>
+                <div>
+                    <label for="B">Description</label>
+                    <input type="text" [(ngModel)]="materialData.description" required name="description" id="B"
+                        placeholder="Enter your Description">
+                </div>
+                <div>
+                    <label for="C">UOM</label>
+                    <input type="text" [(ngModel)]="materialData.umo" required name="umo" id="C"
+                        placeholder="Enter your UOM">
+                </div>
+                <div>
+                    <label for="D">Active for ordering</label>
+                    <input type="text" [(ngModel)]="materialData.activity" required name="activity" id="D"
+                        placeholder="Enter your Activity">
+                </div>
+                <div>
+                    <label for="E">Component usage</label>
+                    <input type="text" [(ngModel)]="materialData.ComponentUsage" required name="ComponentUsage" id="E"
+                        placeholder="Enter your Usage">
+                </div>
+                <div>
+                    <label for="F">Type of Component</label>
+                    <input type="text" [(ngModel)]="materialData.type" required name="type" id="F"
+                        placeholder="Enter your Type">
+                </div>
+                <div>
+                    <label for="G">ROHS Status</label>
+                    <input type="text" [(ngModel)]="materialData.rohsStatus" required name="rohsStatus" id="G"
+                        placeholder="Enter your ROHS Status">
+                </div>
+                <div>
+                    <label for="H">Total Lead Time</label>
+                    <input type="text" [(ngModel)]="materialData.leadTime" required name="leadTime" id="H"
+                        placeholder="Enter your Lead Time">
+                </div>
+                <div>
+                    <label for="I">MSD Status</label>
+                    <input type="text" [(ngModel)]="materialData.msdStatus" required name="msdStatus" id="I"
+                        placeholder="Enter your MSD status">
+                </div>
+                <div>
+                    <label for="J">BG</label>
+                    <input type="text" [(ngModel)]="materialData.bg" required name="bg" id="J"
+                        placeholder="Enter your BG">
+                </div>
+                <div>
+                    <label for="K">Product Group</label>
+                    <input type="text" [(ngModel)]="materialData.productGroup" required name="productGroup" id="K"
+                        placeholder="Enter your Product Group">
+                </div>
+                <div>
+                    <label for="L">Product Family</label>
+                    <input type="text" [(ngModel)]="materialData.productFamily" required name="productFamily" id="L"
+                        placeholder="Enter your Product Family">
+                </div>
+                <div>
+                    <label for="M">TH Limit</label>
+                    <input type="text" [(ngModel)]="materialData.thLimit" required name="thLimit" id="M"
+                        placeholder="Enter your TH Limit">
+                </div>
+                <div>
+                    <label for="N">Product Name</label>
+                    <input type="text" [(ngModel)]="materialData.productName" required name="productName" id="N"
+                        placeholder="Enter your Product Name">
+                </div>
+                <div>
+                    <label for="O">Location</label>
+                    <input type="text" [(ngModel)]="materialData.location" required name="location" id="O"
+                        placeholder="Enter your Location">
+                </div>
+                <div>
+                    <label for="P">Compatibility</label>
+                    <input type="text" [(ngModel)]="materialData.compatibility" required name="compatibility" id="P"
+                        placeholder="Enter Your Compatibility">
+                </div>
+                <div>
+                    <label for="Q">Unit Price $</label>
+                    <input type="text" [(ngModel)]="materialData.unitPrice" required name="unitPrice" id="Q"
+                        placeholder="Enter your Unit Price">
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <div>
+
+                <button class="c_btn">Clear</button>
+                <button type="submit" [disabled]="!materialForm.form.valid" class="s_btn">Submit</button>
+            </div>
+        </div>
+    </form>
+ 
+
+
+
+<div *ngIf="tableData.length > 0">
+    <table>
+        <thead>
+            <tr>
+                <th>Part Code</th>
+                <th>Description</th>
+                <th>UMO</th>
+                <th>Activity</th>
+                <th>Componentusage</th>
+                <th>Type</th>
+                <th>ROHS Status</th>
+                <th>Lead Time</th>
+                <th>MSD Status</th>
+                <th>BG</th>
+                <th>Product Group</th>
+                <th>Product Family</th>
+                <th>TH Limit</th>
+                <th>Product Name</th>
+                <th>Location</th>
+                <th>Compatibility</th>
+                <th>unit Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of tableData">
+                <td>{{data.partCode}}</td>
+                <td>{{data.description}}</td>
+                <td>{{data.umo}}</td>
+                <td>{{data.activity}}</td>
+                <td>{{data.ComponentUsage}}</td>
+                <td>{{data.type}}</td>
+                <td>{{data.rohsStatus}}</td>
+                <td>{{data.leadTime}}</td>
+                <td>{{data.msdStatus}}</td>
+                <td>{{data.bg}}</td>
+                <td>{{data.productGroup}}</td>
+                <td>{{data.productFamily}}</td>
+                <td>{{data.thLimit}}</td>
+                <td>{{data.productName}}</td>
+                <td>{{data.location}}</td>
+                <td>{{data.compatibility}}</td>
+                <td>{{data.unitPrice}}</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div> -->

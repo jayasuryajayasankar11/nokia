@@ -1,0 +1,64 @@
+
+<div class="mx_wd">
+    <div class="content">
+        <div>
+            <h2>Main Material Master</h2>
+        </div>
+
+        <div class="grid">
+            <h3>Add Material</h3>
+            
+
+            <div class="tbl_mx">
+                <form [formGroup]="materialForm" (ngSubmit)="onSubmit()">
+                    <div class="frm_data">
+                        <div><label for="partcode">Part code</label><br>
+                            <input formControlName="partcode" type="text" placeholder="Enter the part code" id="partcode"><br>
+                        </div>
+                        <div> <label for="partdescription">Part Description</label><br>
+                            <input formControlName="partdescription" type="text" placeholder="Enter the part Description" id="partdescription"><br>
+                        </div>
+                        <div><label for="rohsStatus">ROHS status</label><br>
+                            <input formControlName="rohsStatus" type="text" placeholder="Enter the ROHS status" id="rohsStatus"><br>
+                        </div>
+
+
+                        <div> <label for="msdStatus">MSD status</label><br>
+                            <input formControlName="msdStatus" type="text" placeholder="Enter the MSD ststus" id="msdStatus"><br>
+                        </div>
+                        <div><label for="Technology">Technology</label><br>
+                            <input formControlName="Technology" type="text" placeholder="Enter the Technology" id="Technology"><br>
+                        </div>
+                        <div> <label for="Rack">Rack Location</label><br>
+                            <input formControlName="Rack" type="text" placeholder="Enter the Rack Location" id="Rack"><br>
+                        </div>
+
+
+                        <div><label for="Quantity">Quantity</label><br>
+                            <input formControlName="Quantity" type="text" placeholder="Enter the Quantity" id="Quantity"><br>
+                        </div>
+                        <div> <label for="unitPrice">Unit price</label><br>
+                            <input formControlName="unitPrice" type="text" placeholder="Enter the Unit price" id="unitPrice"><br>
+                        </div>
+                        <div><label for="customduty">Custom duty</label><br>
+                            <input formControlName="customduty" type="text" placeholder="Enter the custom duty" id="customduty"><br>
+                        </div>
+
+
+                        <div><label for="catmovement">CAT movement</label><br>
+                            <input formControlName="catmovement" type="text" placeholder="Enter the CAT movement" id="catmovement"><br>
+                        </div>
+
+                    </div>
+
+                    <div class="btn">
+                        <button class="s_btn" type="submit" [disabled]="materialForm.invalid">Save</button>
+                        <button class="c_btn" type="button" (click)="clearform()">Clear</button>
+                    </div>
+                </form>
+            </div>
+
+           
+        </div>
+    </div>
+</div>
