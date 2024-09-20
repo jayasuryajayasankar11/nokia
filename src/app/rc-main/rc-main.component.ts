@@ -15,7 +15,7 @@ import { of } from 'rxjs';
 export class RcMainComponent {
   materialForm: FormGroup;
   selectedFile: File | null = null;
-
+  
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.materialForm = this.fb.group({
       partCode: ['', Validators.required],
@@ -51,14 +51,15 @@ export class RcMainComponent {
       formData.append('file', this.selectedFile);
 
       this.http.post('/api/product/uploadFile', formData)
-        .pipe(catchError(error => {
-          console.error('File upload error:', error);
-          return of(null);
-        }))
-        .subscribe(response => {
-          console.log('File upload successful:', response);
-          this.selectedFile = null; // Clear the file after upload
-        });
+        // .pipe(catchError(error => {
+        //   console.error('File upload error:', error);
+        //   return of(null);
+        // }))
+        // .subscribe(response => {
+          console.log('File upload successful:');
+          // , response
+        //   this.selectedFile = null; // Clear the file after upload
+        // });
     } else {
       console.log('No file selected.');
     }
@@ -67,14 +68,15 @@ export class RcMainComponent {
   onSubmit() {
     if (this.materialForm.valid) {
       this.http.post('/api/product/uploadData', this.materialForm.value)
-        .pipe(catchError(error => {
-          console.error('Form submission error:', error);
-          return of(null);
-        }))
-        .subscribe(response => {
-          console.log('Form data submitted successfully:', response);
-          this.materialForm.reset(); // Reset the form after submission
-        });
+        // .pipe(catchError(error => {
+        //   console.error('Form submission error:', error);
+        //   return of(null);
+        // }))
+        // .subscribe(response => {
+          console.log('Form data submitted successfully:');
+          // , response
+        //   this.materialForm.reset(); // Reset the form after submission
+        // });
     } else {
       console.log('Form is invalid.');
     }
