@@ -1,0 +1,13 @@
+<div class="forgot-password-page">
+    <div class="forgot-password">
+        <p>Forgot Password</p>
+        <div class="forgot-form">
+            <form [formGroup]="forgotPasswordForm" (ngSubmit)="onForgotPasswordSubmit()">
+            
+            <div class="form-dtls"> <input formControlName="email" class="form-input" type="email" placeholder="Enter your email" />
+            </div>
+            <div class="form-dtls"> <button type="submit" class="form-button">Reset Password</button></div>
+            </form>
+        </div>
+    </div>
+</div>

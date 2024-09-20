@@ -10,12 +10,18 @@ import { MastersComponent } from './masters/masters.component';
 import { LocalStocksComponent } from './local-stocks/local-stocks.component';
 import { MainStocksComponent } from './main-stocks/main-stocks.component';
 import { ReportsComponent } from './reports/reports.component';
+import { ForgodpassComponent } from './forgodpass/forgodpass.component';
+import { ChangepassComponent } from './changepass/changepass.component';
+import { NewAccComponent } from './new-acc/new-acc.component';
 
 
 export const routes: Routes = [
 
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
+    { path: 'forgotpassword' , component:ForgodpassComponent},
+    { path: 'changepassword' , component:ChangepassComponent},
+    { path: 'newaccount' , component:NewAccComponent},
     {
         path: 'header', component: HeaderComponent,
         children: [

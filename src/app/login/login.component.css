@@ -1,6 +1,6 @@
 .mx_wd{
     max-width: 1300px;
-    height: 620px;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -19,7 +19,7 @@
     margin: auto;
     box-shadow: 0 4px 27px rgba(0,0,0,.1);
     border-radius: 5px;
-    background-color: rgba(128, 128, 128, 0.747) ;
+    background-color: rgba(255, 254, 254, 0.904) ;
    
    
 }
@@ -27,7 +27,7 @@
 .login h2,h4,p{
     text-align: center;
     padding: 150x 0 0 0;
-    color:rgb(22, 22, 156) ;
+    color:rgb(5, 5, 129) ;
     
     
 }
@@ -51,7 +51,7 @@
 .form-login label{
    
     padding: 0 0 0 20px;
-    color: rgb(22, 22, 156);
+    color: rgb(5, 5, 129);
     font-size: 12px;
 }
 
@@ -62,6 +62,8 @@
     padding-left: 10px;
    
     border: none;
+    border-radius: 5px;
+    background-color:gainsboro;
   
 }
 
@@ -100,5 +102,5 @@
 }
 
 .forgot_change a,.new_account a{
-    color: rgb(22, 22, 156);
+    color: rgb(5, 5, 129);
 }

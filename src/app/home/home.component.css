@@ -35,19 +35,27 @@
 .grids{
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     justify-content: space-between;
 }
 
+.grid{
+    width: 400px;
+}
+
 .grid img{
-    width: 350px;
+    width: 380px;
     border-radius: 10px;
+}
+.grid img:hover{
+    width: 390px;
+    cursor: pointer;
 }
 .links{
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
+    max-width: 1000px;
     margin:20px auto;
     justify-content: space-between;
     line-height: 400%;

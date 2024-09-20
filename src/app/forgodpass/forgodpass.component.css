@@ -1,0 +1,47 @@
+.forgot-password-page{
+    max-width: 1300px;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: center;
+    font-family:  'Josefin Sans', sans-serif;
+    background-image: url("https://wallpaperaccess.com/full/1528297.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.forgot-password-page  .forgot-password:hover{
+    padding: 2.5px;
+}
+
+
+.forgot-password{
+    width: 350px;
+    height: 130px;
+    margin: auto;
+    box-shadow: 0 4px 27px rgba(0,0,0,.1);
+    border-radius: 5px;
+    background-color: rgba(255, 254, 254, 0.863) ;
+    text-align: center;
+    padding: 150x 0 0 0;
+    color:rgb(5, 5, 129) ;
+    font-size: 14px;
+   
+}
+
+
+.form-dtls{
+    margin: 20px;
+}
+
+.form-dtls button{
+    background-color: rgba(0, 128, 0, 0.822);
+    color: white;
+    border-radius: 5px;
+}
+
+.form-dtls button:hover{
+    padding: 2.5px;
+    cursor: pointer;
+}

@@ -17,7 +17,7 @@
     height: 50%;
     border-radius: 5px;
     justify-content: space-between;
-    background:linear-gradient(to bottom,rgb(0, 0, 20),rgb(98, 98, 245));
+    background:linear-gradient(to right, white,rgb(48, 48, 216));
    
     
     
@@ -41,7 +41,7 @@
 .btm .list {
     display: flex;
     flex-wrap: wrap;
-
+    max-width: 800px;
     list-style-type: none;
     justify-content: space-between;
     align-items:baseline;
@@ -86,7 +86,7 @@
 } */
 
 .dropdown .drop ul li a{
-    color: rgb(30, 30, 124);
+    color: rgb(26, 26, 165);
     padding: 12px 0px;
 }
 .dropdown a{
