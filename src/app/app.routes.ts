@@ -13,6 +13,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { ForgodpassComponent } from './forgodpass/forgodpass.component';
 import { ChangepassComponent } from './changepass/changepass.component';
 import { NewAccComponent } from './new-acc/new-acc.component';
+import { AboutComponent } from './about/about.component';
 
 
 export const routes: Routes = [
@@ -34,7 +35,8 @@ export const routes: Routes = [
             { path: 'master', component:MastersComponent},
             { path: 'localstack', component:LocalStocksComponent},
             { path: 'mainstack', component:MainStocksComponent},
-            { path: 'reports', component:ReportsComponent}
+            { path: 'reports', component:ReportsComponent},
+            { path: 'about' , component:AboutComponent}
         ]
     }
 

@@ -15,7 +15,7 @@ import { of } from 'rxjs';
 export class RcMainComponent {
   materialForm: FormGroup;
   selectedFile: File | null = null;
-  
+
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.materialForm = this.fb.group({
       partCode: ['', Validators.required],
@@ -42,6 +42,7 @@ export class RcMainComponent {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
       this.selectedFile = input.files[0];
+      alert('File selected: ' + this.selectedFile.name); 
     }
   }
 
@@ -51,43 +52,54 @@ export class RcMainComponent {
       formData.append('file', this.selectedFile);
 
       this.http.post('/api/product/uploadFile', formData)
-        // .pipe(catchError(error => {
-        //   console.error('File upload error:', error);
-        //   return of(null);
-        // }))
-        // .subscribe(response => {
-          console.log('File upload successful:');
-          // , response
-        //   this.selectedFile = null; // Clear the file after upload
-        // });
+        .pipe(catchError(error => {
+          console.error('File upload error:', error);
+          return of(null);
+        }))
+        .subscribe(response => {
+          console.log('File upload successful:', response);
+          alert('File uploaded successfully!');
+
+          this.selectedFile = null;
+        });
     } else {
-      console.log('No file selected.');
+      alert('No file selected.'); 
     }
   }
 
   onSubmit() {
     if (this.materialForm.valid) {
       this.http.post('/api/product/uploadData', this.materialForm.value)
-        // .pipe(catchError(error => {
-        //   console.error('Form submission error:', error);
-        //   return of(null);
-        // }))
-        // .subscribe(response => {
-          console.log('Form data submitted successfully:');
-          // , response
-        //   this.materialForm.reset(); // Reset the form after submission
-        // });
+        .pipe(catchError(error => {
+          console.error('Form submission error:', error);
+          return of(null);
+        }))
+        .subscribe(response => {
+          console.log('Form data submitted successfully:', response);
+          alert('Form submitted successfully!'); 
+
+          this.materialForm.reset(); 
+        });
     } else {
-      console.log('Form is invalid.');
+      alert('Form is invalid. Please fill in all required fields.'); 
     }
   }
 
   clearform() {
     this.materialForm.reset();
-    this.selectedFile = null; // Clear the file selection
+    this.selectedFile = null; 
   }
 
   onClear() {
-    // Implement any additional clear logic if needed
+  
+    this.selectedFile = null;
+  
+    // Clear the file input element by setting its value to an empty string
+    const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = ''; // Reset the input file element
+    }
+  
+    alert('File selection has been cleared.');
   }
 }
